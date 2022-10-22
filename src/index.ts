@@ -44,6 +44,11 @@ const basicRnI: { [key: string]: number } = {
   M: 1000,
 };
 
+/**
+ * Convert an integer into roman numeral
+ * @param _num a positive integer less than 4000
+ * @returns a roman numeral
+ */
 function romanize(_num: number): string {
   const arr: string[] = [];
 
@@ -58,6 +63,11 @@ function romanize(_num: number): string {
   return arr.join('');
 }
 
+/**
+ * Convert a roman number into an integer
+ * @param _roman roman numeral as a string
+ * @returns integer number
+ */
 function deromanize(_roman: string): number {
   if (basicRnI.hasOwnProperty(_roman)) return basicRnI[_roman];
 
