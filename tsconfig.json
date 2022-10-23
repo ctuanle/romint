@@ -9,7 +9,8 @@
     "rootDir": "src",
     "skipLibCheck": true,
     "strict": true,
-    "declaration": true
+    "declaration": true,
+    "declarationMap": true
   },
-  "exclude": ["node_modules/*", "src/tests"]
+  "exclude": ["node_modules/*", "src/tests", "dist"]
 }

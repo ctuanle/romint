@@ -2,7 +2,7 @@
   "name": "romint",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist",
   "license": "MIT",
   "devDependencies": {
     "@types/babel__core": "^7.1.19",
