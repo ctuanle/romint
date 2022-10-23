@@ -1,8 +1,22 @@
 {
   "name": "romint",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "Tiny of roman numerals to integer and vice versa.",
+  "author": "ctuanle",
+  "keywords": [
+    "roman",
+    "roman numerals",
+    "convertor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ctuanle/romint.git"
+  },
   "main": "dist/index.js",
   "types": "dist",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/babel__core": "^7.1.19",
