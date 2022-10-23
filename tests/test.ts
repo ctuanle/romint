@@ -1,4 +1,4 @@
-import Romint from '..';
+import Romint from '../src/index';
 import { describe, expect, test } from '@jest/globals';
 
 describe('Compare results', () => {
