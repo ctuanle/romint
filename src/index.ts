@@ -49,7 +49,7 @@ const basicRnI: { [key: string]: number } = {
  * @param _num a positive integer less than 4000
  * @returns a roman numeral
  */
-function romanize(_num: number): string {
+export function parseRoman(_num: number): string {
   const arr: string[] = [];
 
   const str: string = String(_num);
@@ -68,7 +68,7 @@ function romanize(_num: number): string {
  * @param _roman roman numeral as a string
  * @returns integer number
  */
-function deromanize(_roman: string): number {
+export function parseInt(_roman: string): number {
   if (basicRnI.hasOwnProperty(_roman)) return basicRnI[_roman];
 
   let result: number = 0;
@@ -87,8 +87,8 @@ function deromanize(_roman: string): number {
 }
 
 const Romint = {
-  parseInt: deromanize,
-  parseRoman: romanize,
+  parseInt,
+  parseRoman,
 };
 
 export default Romint;
