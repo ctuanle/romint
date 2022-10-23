@@ -50,6 +50,14 @@ const basicRnI: { [key: string]: number } = {
  * @returns a roman numeral
  */
 export function parseRoman(_num: number): string {
+  if (typeof _num !== 'number')
+    throw new Error('Invalid input type. Must be a number.');
+
+  if (_num < 1 || _num > 3999)
+    throw new Error(
+      'Invalid input. Input must be a positive number less than 4000'
+    );
+
   const arr: string[] = [];
 
   const str: string = String(_num);
@@ -69,6 +77,19 @@ export function parseRoman(_num: number): string {
  * @returns integer number
  */
 export function parseInt(_roman: string): number {
+  if (typeof _roman !== 'string')
+    throw new Error('Invalid input type. Must be a string');
+
+  if (_roman.length === 0)
+    throw new Error('Invalid input. Must not be an empty string');
+
+  const reg = new RegExp(
+    /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/
+  );
+
+  if (!reg.test(_roman))
+    throw new Error('You input is not a valid roman numeral');
+
   if (basicRnI.hasOwnProperty(_roman)) return basicRnI[_roman];
 
   let result: number = 0;

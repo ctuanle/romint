@@ -16,6 +16,6 @@
     "build": "yarn tsc",
     "start": "node .",
     "test": "yarn jest",
-    "install:local": "yarn add --dev file:./"
+    "add:local": "yarn build && yarn add --dev file:./"
   }
 }
